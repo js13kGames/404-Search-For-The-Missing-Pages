@@ -5,7 +5,7 @@ const pages = ["TOR2A","TOR2B","TOR2D","COM3B","RNG2B","RNG1C","ERR5G","SCR3A"];
 const K = value => () => value; //constant function for button values
 const req = (value, require) => () => areas[require].page? "" : value; //function that requires a page to be collected before value appears
 
-let Area; //which area the player is in
+let Area = "-----"; //which area the player is in
 
 let areas =  { //all areas in the game, buttons are stored by their location
 	"TOR1A": {"text":"You are in a dark place...  The Dark Web!  That can't be good. There must be many layers of encryption around here. Well, where do you want to go? Sorry about the cryptic names, but you'll have to live with ","buttons":[K("TOR2A") , K("TOR1C")],"page":false},
@@ -140,6 +140,6 @@ setInterval(function() {
 	Reset(); //reset game if you win
 	delButton("next");
 	clearButtons(); //if the function reaches here, the player has collected all the pages
-	setText("You win");
+	setText("Web Browser: So you found the pages. I suppose that means I leave you now. But, remember me. I may come back.");
 	document.getElementById("page").textContent = "";
 },1000); //check if player has won
