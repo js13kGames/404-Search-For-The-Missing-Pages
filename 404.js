@@ -1,8 +1,7 @@
 const key = k => `SearchForThePage.${k}`; //prefix for local storage
 let textNumber = 0; //which dialog the player is on
-const dialogs = ["Perhaps you can solve that little puzzle, but a greater challenge is coming...","I have searched for pages across all the World Wide Web...","World Wide!","Now it is your turn...","Lift me from my burden!","This time...","You find your page!","Find 404 pages!","That's too much for you?","Fine then!","I shall leave it at eight.","Eight pages, that's all you have to do >:D"]; //dialogs to show to user
-//const pages = ["TOR2A","TOR2B","TOR2D","COM3B","RNG2B","RNG1C","ERR5G","SCR3A"]; //areas where pages are
-const pages = ["TOR2A"];
+const dialogs = ["Perhaps you can solve that little puzzle, but a greater challenge is coming...","I have searched for pages across all the World Wide Web...","World Wide!","Now it is your turn...","Lift me from my burden!","This time...","You find your page!","Find 404 pages!","That's too much for you?","Fine then!","I shall leave it at eight.","Eight pages, that's all you have to do."]; //dialogs to show to user
+const pages = ["TOR2A","TOR2B","TOR2D","COM3B","RNG2B","RNG1C","ERR5G","SCR3A"]; //areas where pages are
 const K = value => () => value; //constant function for button values
 const req = (value, require) => () => areas[require].page? "" : value; //function that requires a page to be collected before value appears
 
